@@ -1,9 +1,18 @@
 package com.campusdual.classroom;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Exercise07 {
 
     public static void main(String[] args) {
+
+        positionInAList(8);
+        positionInAList(20);
+        sumFirstNaturalNumbers(10);
+        showFirstNaturalNumbers(20);
 
     }
 
@@ -14,18 +23,35 @@ public class Exercise07 {
     // Si lo encuentra, que imprima el siguiente mensaje → El elemento X se encuentra en la posición: Y
     // Si NO lo encuentra, que imprima el siguiente mensaje → El elemento X no se encuentra en la lista.
     public static void positionInAList(int num) {
+        List <Integer> lstInteger = new ArrayList();
+        for (int i = 10;0 <= i ; i--){
+            lstInteger.add(i);
+        }
+        int indice = lstInteger.indexOf(num);
+        if (indice < 0) {
+            System.out.println("El elemento " + num + " no se encuentra en la lista.");
+        } else {
+            System.out.println("El elemento " + num + " se encuentra en la posición: " + indice);
 
+        }
     }
 
     //TODO ↓
     // Que imprima como mensaje la suma de los primeros N números positivos
     public static void sumFirstNaturalNumbers(int num) {
-
+        int suma = 0;
+        for(int i=0; i <=num; i++){
+            suma +=i;
+        }
+        System.out.println(suma);
     }
 
     //TODO ↓
     // Que imprima por pantalla los N primeros números positivos
     public static void showFirstNaturalNumbers(int num) {
+        for(int i=0; i <=num; i++){
+            System.out.println(i);
+        }
 
     }
 
